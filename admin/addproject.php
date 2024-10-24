@@ -20,8 +20,8 @@
     
   <!-- nav bar -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Expand at md</a>
+    <div class="container-fluid px-5">
+      <a class="navbar-brand ms-5" href="#">Expand at md</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -68,6 +68,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="projects.php">
+              <span data-feather="file" class="align-text-bottom"></span>
+              Projects
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="addproject.php">
               <span data-feather="file" class="align-text-bottom"></span>
               Add Project
@@ -90,7 +96,7 @@
     </nav>
     <!-- add project -->
     <div id="sidebarMenu" class="col-9 col-md-9 col-lg-10 bg-light">
-      <form action="" method="POST" class="w-75 mx-auto text-center">
+      <form action="../includes/addproject_handler.php" method="POST" enctype="multipart/form-data" class="w-75 mx-auto text-center">
       <h2>Add Project</h2>
           <label for="name" class="form-label my-2">Project Name</label>
           <input type="text" name="name" placeholder="Project Name" class="form-control">
@@ -98,11 +104,11 @@
           <label for="brief_description" class="form-label my-2">Brief Description</label>
           <input type="text" name="brief_description" placeholder="Brief Description" class="form-control my-2">
 
-          <label for="full_description" class="form-label my-2">Full Description</label>
-          <textarea name="details" placeholder="Full Description" class="form-control my-2" rows="10"></textarea>
+          <label for="full_description" class="form-label my-2">Project Details</label>
+          <textarea name="details" placeholder="Project Details" class="form-control my-2" rows="10"></textarea>
 
           <label for="image" class="form-label my-2">Image</label>
-          <input type="file" name="image" class="form-control my-2">
+          <input type="file" name="project_image" class="form-control my-2">
           <button class="btn btn-primary my-2" type="submit">Add Project</button>
       </form>
     </div>
