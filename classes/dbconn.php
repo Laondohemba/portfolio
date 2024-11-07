@@ -10,6 +10,7 @@ class Dbconn{
     protected function conn(){
         $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";port=" . $this->port;
 
+        // Dbconn::method() to call a static method outside a class
         try {
             // Create a new PDO instance
             $pdo = new PDO($dsn, $this->dbusername, $this->dbpassword);
